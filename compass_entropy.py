@@ -5,6 +5,7 @@ import pandas as pd
 
 from scipy.stats import entropy
 
+
 def shannon_entropy(col):
     counts = col.value_counts()
     entropy_value = entropy(counts)
