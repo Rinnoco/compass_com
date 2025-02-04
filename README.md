@@ -50,7 +50,7 @@ files to analyze performance in varied environments.
 To download the dataset:
 
 1. Visit the [COMPASS Project page](#https://rinnoco.com/projects/compass.html).
-2. Got to Zenodo and Click on the "Download" button for the files you are interested in.
+2. Go to Zenodo and Click on the "Download" button for the files you are interested in.
 
 ## Citation
 
