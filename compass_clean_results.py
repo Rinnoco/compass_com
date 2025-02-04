@@ -29,7 +29,7 @@ def aggregate_data(input_files, output_file, verbose=False):
                     if verbose:
                         print(f"Ignoring invalid row: {row}")
                     continue
-                cluster, file_name, method, compression, size, _ = row
+                cluster, file_name, method, compression, size, _, _, _, _, _ = row
                 size = int(size) if size.isdigit() else 0
                 if "full" in file_name:
                     baseline_data[method + "_" + compression] += size
@@ -48,14 +48,14 @@ def aggregate_data(input_files, output_file, verbose=False):
         if verbose:
             # Write aggregated data
             for method_compression, values in data.items():
-                writer.writerow([method_compression, values["num_clusters"], values["size"],0])
+                writer.writerow([method_compression, values["num_clusters"], values["size"], 0])
 
             # Write baseline data
             for method_compression, size in baseline_data.items():
                 writer.writerow(["BASELINE_" + method_compression, 1, size])
             writer.writerow("-----")
         min_baseline = min(baseline_data.values())
-        writer.writerow(["COMPASS_BASELINE", 1, min_baseline,0])
+        writer.writerow(["COMPASS_BASELINE", 1, min_baseline, 0])
         # Calculate and write COMPASS row for each method
         for method, cluster_sizes in method_compression_size.items():
             cluster_dict = defaultdict(list)

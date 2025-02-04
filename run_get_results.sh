@@ -46,6 +46,7 @@ for input_file in "${INPUT_FILES[@]}"; do
     # Generate output file name based on input file
     output_file="aggregated_${input_file%.csv}.csv"
     # Run the Python program
+    #echo "$input_file"
     python3 compass_clean_results.py "$input_file" -o "$output_file" ${VERBOSE}
     echo "Output stored in: $output_file"
 done

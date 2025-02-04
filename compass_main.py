@@ -249,8 +249,8 @@ if __name__ == '__main__':
     compass_entropy.analyze(input_file, entropy_file)
 
     use_columns = get_entorpy_columns(entropy_file, 3)
-    # if num_clusters == 2:
-    #     split_columns(input_file, use_columns, output_file, "COMPASS_SIBACO", num_clusters, temp_dir)
-    # split_columns_per_cluster(input_file, output_file, f"COMPASS_KMEANS_DATA ({num_clusters})", num_clusters, temp_dir)
+    if num_clusters == 2:
+        split_columns(input_file, use_columns, output_file, "COMPASS_SIBACO", num_clusters, temp_dir)
+    split_columns_per_cluster(input_file, output_file, f"COMPASS_KMEANS_DATA ({num_clusters})", num_clusters, temp_dir)
     split_columns_per_entropy_cluster(input_file, output_file, f"COMPASS_KMEANS_ENTROPY ({num_clusters})", num_clusters,
                                       temp_dir)

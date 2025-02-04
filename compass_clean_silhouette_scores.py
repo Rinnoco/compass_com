@@ -92,7 +92,8 @@ def create_combined_dataframe(data_scores, entropy_scores, file_mapping):
     return combined_df
 
 def main(input_file, output_file):
-    pattern = r'^(.+\.log):COMPASS_KMEANS_(DATA|ENTROPY) \((\d+)\): n_clusters = (\d+), the average silhouette_score,([-+]?\d*\.\d+|\d+)$'
+    #pattern = r'^(.+\.log):COMPASS_KMEANS_(DATA|ENTROPY) \((\d+)\): n_clusters = (\d+), the average silhouette_score,([-+]?\d*\.\d+|\d+)$'
+    pattern = r'^(.+\.log):COMPASS_KMEANS_(DATA|ENTROPY) \((\d+)\): n_clusters = (\d+), the average silhouette_score,\s*([-+]?\d*\.\d+|\d+)$'
 
     data_scores, entropy_scores = process_file(input_file, pattern)
     combined_df = create_combined_dataframe(data_scores, entropy_scores, file_mapping)
