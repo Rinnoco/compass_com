@@ -57,13 +57,13 @@ To download the dataset:
 When using this dataset for research, please cite it as follows:
 
 ```
-Constantinos Costa. 2025. COMPASS Project Software. Zenodo. http://doi.org/10.5281/zenodo.14759015
+Costa, C., Chrysanthis, P., Herodotou, H., Costa, M., Stavrakis, E., & Nicolaou, N. (2025). COMPASS: Big Data Compression Tool using Attribute-based Signatures. Zenodo. https://doi.org/10.5281/zenodo.14759015
 ```
 
 ## License
 
 This dataset is available under
-the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/), which
+the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0), which
 permits sharing and adapting the material provided that appropriate credit is given.
 
 ## Contact Information
