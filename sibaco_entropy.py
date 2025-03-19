@@ -11,6 +11,7 @@ import os
 from scipy.stats import entropy
 import sys
 import pandas as pd
+import subprocess
 
 
 def usage():
@@ -48,6 +49,15 @@ def analyze(infpath, outfpath):
         entropy_row = [entropies[colix] for colix in entropies.keys()]
         csvwriter.writerow(entropies)
         csvwriter.writerow(entropy_row)
+
+
+def analyze_C(input_file, outfpath):
+    """ Call the C++ entropy calculator """
+    cpp_executable = "./entropy_calculator"  # Ensure the compiled C++ executable is present
+    try:
+        subprocess.run([cpp_executable, input_file, outfpath], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error running entropy calculator: {e}")
 
 
 if __name__ == '__main__':

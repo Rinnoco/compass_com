@@ -45,6 +45,12 @@ files to analyze performance in varied environments.
    python3 compass_clean_silhouette_scores.py [input_file] [output_file]
    ```
 
+4. **To compile the C++ code, run**:
+    ```bash
+   g++ -o entropy_calculator entropy_calculator.cpp -O2
+   ````
+   This will generate an entropy_calculator executable that your Python script can call.
+
 ## How to Download
 
 To download the dataset:
