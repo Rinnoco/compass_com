@@ -1,4 +1,4 @@
-# COMPASS Project Dataset
+# COMPASS Project
 
 ## Description
 
